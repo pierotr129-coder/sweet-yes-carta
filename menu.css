@@ -1,0 +1,19 @@
+@font-face{font-family:DM;src:url('assets/fonts/dm-sans.ttf');font-display:swap}
+@font-face{font-family:Fraunces;src:url('assets/fonts/fraunces.ttf');font-display:swap}
+:root{--ink:#391613;--pink:#f49ec4;--cream:#fff8e8}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font:16px/1.4 DM,sans-serif;background:var(--cream)}
+h1,h2,h3,strong.brand{font-family:Fraunces,Georgia,serif;line-height:1.03;margin:0}a{color:inherit}a:focus-visible{outline:3px solid #875124;outline-offset:3px}
+.location,.banner span{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}
+.welcome{min-height:100svh;display:grid;place-items:center;isolation:isolate;background:var(--pink)}
+.welcome:before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(#f49ec4c7,#f49ec4c7),url('assets/carta-web/fresas-con-crema-grande.webp') center/cover;filter:blur(5px)}
+.welcome-inner{width:min(89%,390px);padding:24px 0;text-align:center}.welcome .location{margin:0 0 clamp(18px,4vh,44px);letter-spacing:.25em}
+.logo{width:clamp(120px,24vh,205px);border-radius:50%}.welcome h1{font-size:clamp(43px,8vw,61px);margin:12px 0 26px}.welcome nav{display:grid;gap:10px}
+.welcome nav a{padding:13px 23px;border-radius:100px;background:var(--cream);display:flex;justify-content:space-between;text-decoration:none}.welcome nav a:after{content:'→'}.welcome nav a:first-child,footer{background:var(--ink);color:var(--cream)}.welcome-inner>p:last-child{margin:24px 0 0}
+.menu main{max-width:760px;margin:auto;padding:12px clamp(12px,3vw,24px) 30px}
+header,header a,.hero,.banner,li{display:flex;align-items:center;justify-content:space-between;gap:12px}header{padding:6px 6px 16px}header a{text-decoration:none;justify-content:flex-start}header strong{font:1.3rem Fraunces,Georgia,serif}header img{width:46px;border-radius:13px}
+.hero,.banner{background:var(--pink);border-radius:24px;padding:12px 14px 12px 20px}.hero h1{font-size:clamp(43px,8vw,70px)}.hero p{max-width:14ch;font-size:1.12rem}.hero img{width:38%;aspect-ratio:.91;object-fit:cover;border-radius:48%}
+.category{margin-top:22px}.banner{min-height:115px;padding-block:7px}.banner h2{font-size:clamp(27px,5.6vw,45px);margin-top:5px}.banner img{width:32%;aspect-ratio:1.15;object-fit:cover;border-radius:24px}.category:first-of-type .banner img{object-fit:contain}
+.category:nth-of-type(even) .banner{flex-direction:row-reverse;justify-content:flex-end}.category:nth-of-type(3n+2) .banner{background:#dce8a7}.category:nth-of-type(3n) .banner{background:#f4ddc2}
+ul{list-style:none;margin:4px 12px;padding:0}li{padding:11px 0;border-bottom:1px solid #e4ccc3;align-items:baseline}li>b{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}small{display:block;color:#684c45}small:empty{display:none}
+aside,footer{padding:20px;border-radius:20px;margin-top:14px}aside{background:#fce3ec}aside h3{margin-bottom:12px}footer{text-align:center}footer p{color:var(--pink)}
+@media(prefers-reduced-motion:no-preference){@supports(animation-timeline:view()){.banner h2{animation:arrive linear both;animation-timeline:view();animation-range:entry 0% entry 100%}@keyframes arrive{from{transform:translateY(7px);opacity:.65}to{transform:none;opacity:1}}}}
